@@ -1,22 +1,218 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.1 Transitional//EN">
-<html>
-  <head>
-    <title>Website-Projekt</title>
-    <meta name="AUTHOR" content="Euer Name">
-    <meta name="COPYRIGHT" content="Copyright (c) 2025 by Vorname Nachname">
-    <meta name="ROBOTS" content="INDEX, FOLLOW">
-    <meta name="DESCRIPTION" content="Dies ist die Bewerbungshomepage von Vorname Nachname">
-    <meta name ="KEYWORDS" content ="Bewerbungshomepage, Vorname Nachname, Bewerbung">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
-      <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  </head>
-
-  <body>
-    <p>Hello World</p>
-  </body>
-</html>
+/*  -----------------------------------------        */
+/*  Übergreifend / Body                              */
+/*  -----------------------------------------        */
+html, body {
+ background-image:url(/hintergrund_neu.jpg); !Hintergrundbild verwenden;
+ background-repeat:no-repeat; !Hintergrundbild wird nicht wiederholt;
+ background-size: cover;      !Parallax-Effekt - Hintergundbild ist bildschirmfüllend;
+ overflow:hidden;             !Alle Body-Scrollbalken verstecken;
+}
+ 
+#kopfbereich {
+ 
+  position:fixed;            ! Position des Kopfbereichs ist immer oben - FIX!;
+  top:0;                     ! Position oben;
+  left:0;                    ! Position ganz links;
+  border: 1px solid #ccc;    ! Rahmenart und -farbe;
+  background-color: rgb(238,197,145);    ! Hintergrundfarbe;
+  width:100%;                ! Breite des Kopfbereichs;
+  height:100px;              ! Höhe des Kopfbereichs;
+  z-index:2;                 ! Kopfbereich überlagert andere Bereiche;                
+}
+ #logobereich {
+  position:fixed;               ! Position des Logos ist fest;
+  top:0;                            ! Position oben;
+  left:0;                            ! Position ganz links;
+  border: 0px solid #ccc; ! Rahmenart und -farbe;
+  background-image:url("Präsentationlk+.png");
+  background-repeat:no-repeat;
+  background-size: cover;    
+  background-color:rgba(16,78,139,0);    ! Hintergrundfarbe;
+  width:200px;                 ! Breite des Kopfbereichs;
+  height:100px;                ! Höhe des Kopfbereichs;
+  z-index:3;                      ! Logo überlagert andere Bereiche;                
+}
+ 
+#navibereich {
+  position:fixed;            ! Position des Navibereichs immer links! - Fix;
+  top: 100px;                ! Position unterhalb des Kopfbereiches;
+  left:0;                    ! Position ganz links;
+  border: 1px solid #ccc;    ! Rahmenart und -farbe;
+  background-color:;      ! Hintergrundfarbe;
+  width:150px;               ! Breite des Navibereichs;
+  min-height:300px;          ! Minimal-Höhe des Navibereichs;
+  z-index:2;                 ! Navibereich überlagert andere Bereiche;
+}
+ 
+#textbereich {
+ 
+  position:fixed;            ! Position des Textbereichs immer in der Mitte!;
+  left:0;                    ! Textbereich fängt ganz links an;
+  right:0;                   ! Textbereich geht bis ganz rechts;
+  top:100px;                 ! Außenabstand zum Kopfbereich;
+  padding-left:210px;        ! Innenabstand zum Menü;
+  padding-right:210px;       ! Innenabstand zum Newsbereich;
+  padding-top:20px;          ! Innenabstand nach oben;
+  padding-bottom:60px;       ! Innenabstand nach unten;
+  border: 1px solid #ccc;    ! Rahmenart und -farbe;
+  height:100%;               ! Höhe des Textbereiches auf 100% eingestellt;
+  overflow-y: auto;          ! Zeige Scrollbalken rechts, falls notwendig;
+  background-color:rgba(255,255,255,0); ! Hintergrund ist weiß mit 50 %iger Transparenz;
+}
+ 
+#newsbereich {
+  position:fixed;            ! Position des Newsbereichs immer rechts! - FIX;
+  right:0px;                 ! Rechtsausrichtung;
+  top: 100px;                ! Position unterhalb des Kopfbereiches;
+  border: 1px solid #ccc;    ! Rahmenart und -farbe;
+  background-color:;   ! Hintergrundfarbe;
+  width:200px;               ! Breite des Newsbereichs;
+  min-height:300px;          ! Minimal-Höhe des Newsbereichs;
+  z-index:2;                 ! Newsbereich überlagert andere Bereiche;
+}
+ 
+#fussbereich {
+ 
+ position:fixed;              ! Position des Fußbereichs immer unten!;
+ bottom:0;                    ! Unten ausgerichtet!;
+ left:0;                      ! Position ganz links;
+ border: 1px solid #ccc;      ! Rahmenart und -farbe;
+ width: 100%;                 ! Breite des Fussbereichs;
+ background-color: ;      ! Hintergrundfarbe;
+ height:50px;                 ! Höhe des Fußbereichs;
+ z-index:2;                   ! Fußbereich überlagert andere Bereiche;  
+}
+ 
+/*  Höhe des Contentbereichs festlegen (wichtig!)    */                    
+.content-block {
+  padding-bottom: 1000px;
+}
+ 
+/*  ----------------------------------------- */
+/*  Schriftformatierung                       */
+/*  ----------------------------------------- */
+ 
+p {
+font-family: BodoniModa; ! Festlegung der Schriftart;
+font-style:normal;                                                 ! Festlegung des Schrifttyps;
+font-size:30pt;                                                    ! Festlegung des Schriftgröße;
+font-weight:normal;                                                ! Festlegung der Fettschrift;
+color:#000000;                                                     ! Festlegung des Schriftfarbe;
+text-align:center;      ! Schriftausrichtung, möglich ist left | center | right;
+}
+.title {
+font-size:18pt;                                                    ! Festlegung des Schriftgröße;
+font-weight:bold;                                                  ! Festlegung der Fettschrift;
+text-align:left;      ! Schriftausrichtung, möglich ist left | center | right;
+}
+}
+ 
+}
+ 
+ 
+ 
+/*  Einbindung des DIV-Bereiches „logobereich“ mit entsprechender Positionierung (dort einbinden, wo auch die anderen DIV-Bereiche definiert wurden)     */
+ 
+ #logobereich {
+  position:fixed;               ! Position des Logos ist fest;
+  top:0;                            ! Position oben;
+  left:0;                            ! Position ganz links;
+  border: 0px solid #ccc; ! Rahmenart und -farbe;
+  background-image:url("Präsentationlk+.png");
+  background-repeat:no-repeat;
+  background-size: cover;    
+  background-color:rgba(16,78,139,0);    ! Hintergrundfarbe;
+  width:200px;                 ! Breite des Kopfbereichs;
+  height:100px;                ! Höhe des Kopfbereichs;
+  z-index:3;                      ! Logo überlagert andere Bereiche;                
+}
+ 
+/*  ----------------------------------------------------------- */
+/*  Bildformatierung für Bilder im Textbereich      */
+/*  ----------------------------------------------------------- */
+.text-image-left {
+width:3000px;  ! Größe des Bildes wird festgelegt;
+margin:-1000px;   ! Abstand zu anderen Objekten;
+float:left;        ! Ausrichtung links;
+}
+.text-image-right {
+width:200px; ! Größe des Bildes wird festgelegt;
+margin:0px;  ! Abstand zu anderen Objekten;
+float:right;     ! Ausrichtung rechts;
+}
+ 
+.header-title {
+font-family:‘BodoniModa’, sans-serif;   ! Festlegung der Schriftart;
+font-size:24pt;       ! Festlegung des Schriftgröße;
+font-weight:700;      ! Festlegung des Fettschrift, hier können Sie auch bold angeben;
+text-align:center;      ! Schriftausrichtung, möglich ist left | center | right;
+}
+/*  -----------------------------------------        */
+/*  Menüformatierung                                 */
+/*  -----------------------------------------        */
+ 
+/*  Linkformatierung für das Menü übergreifend       */
+.naviformat a, button {
+    font-family: 'BodoniModa', sans-serif;
+    text-transform:uppercase; ! Verwende Großbuchstaben;
+font-size:90%;              ! Festlegung des Schriftgröße;
+  font-weight:700;          ! Festlegung Fettschrift für Montserrat;
+  color: rgb(0,0,0);    ! Festlegung des Schriftfarbe (schwarz);
+  display: block;     ! Art der Anzeige als Blockelement;
+  transition: all 0.3s ease-out 0s; ! Definition Übergang von Normal zu Hover;
+  text-decoration:none;   ! Keinen Unterstrich unterhalb des Menütitels;
+    line-height: 20px;    ! Höhe der Zeile wird festgelegt;
+    padding: 5px 5px;     ! Innenabstand nach links/rechts/oben/unten;
+}
+/*  Formatierung des Hauptmenüs (mainnav)                  */
+.mainnav {
+  text-align:right;          ! Textausrichtung rechtbündig;
+  list-style-type: none;     ! es werden keine Aufzählungszeichen dargestellt;
+  margin: 20px 5px;          ! Abstände nach oben/unten und rechts/links;
+       padding: 5px 5px;          ! Innenabstand nach links/rechts/oben/unten;
+}
+ 
+.mainnav > li {
+  float:none; ! Menüpunkte untereinander, bei float:left, nebeneinander;
+}      
+/*  Formatierung des aktiven Hauptmenüpunkts */
+.mainnav > li > a.active {
+  font-weight:700;    ! Festlegung der Fettschrift, auch „bold“ möglich;
+  text-shadow: 1px 1px rgb(139,115,85), 2px 2px rgb(139,115,85), 3px 3px  rgb(139,115,85); ! Text-Schatten;
+    color: rgba(222,184,135); ! Festlegung des Schriftfarbe;
+}
+/*  Formatierung des Menüpunkts, wenn die Maus darüber fährt */
+.mainnav > li > a:hover {
+  font-weight:700;    ! Festlegung der Fettschrift, auch „bold“ möglich;
+  font-style:italic;  ! Festlegung der Kursiv-Schrift;
+  text-shadow: 1px 1px white, 2px 2px white, 3px 3px white; ! Text-Schatten;
+    background-color:rgba(222,184,135,1);   ! Hintergrundfarbe;
+}
+/*  -----------------------------------------        */
+/*  Für Teaser (Blickfang)                      */
+/*  -----------------------------------------        */
+.teaser {
+  font-weight:bold;       ! setze Schriftart und -gewicht;
+  font-family:'Montserrat', sans-serif;
+  padding: 5px 5px;       ! Innenabstand für den Teaser;
+  margin: 0 2px 4px 2px;      ! Außenabstand nach unten zum nächsten Teaser;
+  border-bottom: 1px solid #ccc;    ! unten gibt es eine Begrenzungslinie;
+}
+.teaser_date {
+  font-size:90%;                          ! etwas kleiner als die Standardschrift;
+}
+.teaser_title {
+  font-size:110%;                         ! etwas größer als die Standardschrift;
+  line-height:140%;
+}
+.teaser_text {
+        line-height: 140%;                     ! Anpassung der Zeilenhöhe;
+}
+a.teaser_link {
+padding-top: 4px;
+color:black;
+}
+.teaser_border {
+  color: #333;
+  border: 2px solid #548b54;
+}

@@ -4,7 +4,7 @@
     // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+       
         {
             "type": "node",
             "request": "launch",
@@ -12,11 +12,11 @@
             "runtimeExecutable": "npm",
             "runtimeArgs": [
                 "run",
-                "dev" 
+                "dev"
             ],
             "console": "integratedTerminal", // Zeigt die Ausgabe im VS Code Terminal an
             "internalConsoleOptions": "neverOpen", // Verhindert, dass die Debug-Konsole zusätzlich aufgeht
-
+ 
             // Optional: Browser automatisch öffnen
             "serverReadyAction": {
                 "action": "openExternally",

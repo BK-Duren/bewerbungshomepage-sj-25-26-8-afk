@@ -2,12 +2,6 @@
 /*  Übergreifend / Body                              */
 /*  -----------------------------------------        */
 html, body {
- background-image:url("");
- background-repeat:no-repeat; 
- background-size: cover;      
- overflow:hidden;             
- font-size:12pt;
- }html, body {
  background-image:url(/hintergrund_neu.jpg); !Hintergrundbild verwenden;
  background-repeat:no-repeat; !Hintergrundbild wird nicht wiederholt;
  background-size: cover;      !Parallax-Effekt - Hintergundbild ist bildschirmfüllend;
@@ -99,16 +93,22 @@ html, body {
 /*  ----------------------------------------- */
  
 p {
-font-family: Candara; ! Festlegung der Schriftart;
+font-family: BodoniModa; ! Festlegung der Schriftart;
 font-style:normal;                                                 ! Festlegung des Schrifttyps;
-font: size 14px;pt;                                                    ! Festlegung des Schriftgröße;
+font-size:30pt;                                                    ! Festlegung des Schriftgröße;
 font-weight:normal;                                                ! Festlegung der Fettschrift;
 color:#000000;                                                     ! Festlegung des Schriftfarbe;
+text-align:center;      ! Schriftausrichtung, möglich ist left | center | right;
 }
 .title {
-font-size:12pt;                                                    ! Festlegung des Schriftgröße;
+font-size:18pt;                                                    ! Festlegung des Schriftgröße;
 font-weight:bold;                                                  ! Festlegung der Fettschrift;
+text-align:left;      ! Schriftausrichtung, möglich ist left | center | right;
 }
+}
+ 
+}
+ 
  
  
 /*  Einbindung des DIV-Bereiches „logobereich“ mit entsprechender Positionierung (dort einbinden, wo auch die anderen DIV-Bereiche definiert wurden)     */
@@ -142,7 +142,7 @@ float:right;     ! Ausrichtung rechts;
 }
  
 .header-title {
-font-family:‘Montserrat’, sans-serif;   ! Festlegung der Schriftart;
+font-family:‘BodoniModa’, sans-serif;   ! Festlegung der Schriftart;
 font-size:24pt;       ! Festlegung des Schriftgröße;
 font-weight:700;      ! Festlegung des Fettschrift, hier können Sie auch bold angeben;
 text-align:center;      ! Schriftausrichtung, möglich ist left | center | right;
@@ -153,7 +153,7 @@ text-align:center;      ! Schriftausrichtung, möglich ist left | center | right
  
 /*  Linkformatierung für das Menü übergreifend       */
 .naviformat a, button {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'BodoniModa', sans-serif;
     text-transform:uppercase; ! Verwende Großbuchstaben;
 font-size:90%;              ! Festlegung des Schriftgröße;
   font-weight:700;          ! Festlegung Fettschrift für Montserrat;
@@ -178,13 +178,41 @@ font-size:90%;              ! Festlegung des Schriftgröße;
 /*  Formatierung des aktiven Hauptmenüpunkts */
 .mainnav > li > a.active {
   font-weight:700;    ! Festlegung der Fettschrift, auch „bold“ möglich;
-  text-shadow: 1px 1px black, 2px 2px grey, 3px 3px   #696969; ! Text-Schatten;
-    color: rgba(90,195,208,1);  ! Festlegung des Schriftfarbe;
+  text-shadow: 1px 1px rgb(139,115,85), 2px 2px rgb(139,115,85), 3px 3px  rgb(139,115,85); ! Text-Schatten;
+    color: rgba(222,184,135); ! Festlegung des Schriftfarbe;
 }
 /*  Formatierung des Menüpunkts, wenn die Maus darüber fährt */
 .mainnav > li > a:hover {
   font-weight:700;    ! Festlegung der Fettschrift, auch „bold“ möglich;
   font-style:italic;  ! Festlegung der Kursiv-Schrift;
   text-shadow: 1px 1px white, 2px 2px white, 3px 3px white; ! Text-Schatten;
-    background-color:rgba(255,255,255,0.7);   ! Hintergrundfarbe;
+    background-color:rgba(222,184,135,1);   ! Hintergrundfarbe;
+}
+/*  -----------------------------------------        */
+/*  Für Teaser (Blickfang)                      */
+/*  -----------------------------------------        */
+.teaser {
+  font-weight:bold;       ! setze Schriftart und -gewicht;
+  font-family:'Montserrat', sans-serif;
+  padding: 5px 5px;       ! Innenabstand für den Teaser;
+  margin: 0 2px 4px 2px;      ! Außenabstand nach unten zum nächsten Teaser;
+  border-bottom: 1px solid #ccc;    ! unten gibt es eine Begrenzungslinie;
+}
+.teaser_date {
+  font-size:90%;                          ! etwas kleiner als die Standardschrift;
+}
+.teaser_title {
+  font-size:110%;                         ! etwas größer als die Standardschrift;
+  line-height:140%;
+}
+.teaser_text {
+        line-height: 140%;                     ! Anpassung der Zeilenhöhe;
+}
+a.teaser_link {
+padding-top: 4px;
+color:black;
+}
+.teaser_border {
+  color: #333;
+  border: 2px solid #548b54;
 }
